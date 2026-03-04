@@ -14,3 +14,8 @@ jobs:
         run: |
              curl -v -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
                   https://api.github.com/repos/${{ github.repository }}/properties/values
+                  
+      - name: Get custom properties
+        run: |
+             curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+                  https://api.github.com/repos/${{ github.repository }}/properties/values
